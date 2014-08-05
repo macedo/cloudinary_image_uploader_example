@@ -1,0 +1,12 @@
+default: &default
+  cloud_name: <%= ENV['CLOUDINARY_CLOUD_NAME'] %>
+  api_key: <%= ENV['CLOUDINARY_API_SECRET'] %>
+  api_secret: <%= ENV['CLOUDINARY_API_SECRET'] %>
+  enhance_image_tag: true
+
+development:
+  static_image_support: false
+production:
+  static_image_support: true
+test:
+  static_image_support: false
