@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
+    <%= f.attachinary_file_field :avatar %>
   </div>
   <div class="field">
     <%= f.label :photos %><br>
-    <%= f.file_field :photos, multiple: true %>
+    <%= f.attachinary_file_field :photos %>
   </div>
   <div class="actions">
     <%= f.submit %>

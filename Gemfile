@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'cloudinary'
+gem 'coffee-rails' #attachinary dependency
 gem 'attachinary'
 
 gem 'rails', '4.1.4'
