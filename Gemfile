@@ -11,11 +11,11 @@ gem 'pg'
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
-gem 'bower-rails'
 gem 'therubyracer'
 gem 'spring',        group: :development
 gem 'devise'
 gem 'simple_form'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'dotenv-rails'

@@ -1,5 +1,5 @@
-//= require jquery/dist/jquery
-//= require jquery-ujs/src/rails
+//= require jquery
+//= require jquery-ujs
 //= require bootstrap
 //= require cloudinary
 //= require attachinary
