@@ -1,0 +1,21 @@
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <fieldset><h2 class='form-signup-heading'>Create an User</h2></fieldset>
+  <%= devise_error_messages! %>
+  <%= f.input :email,
+    input_html: { class: 'form-control' },
+    placeholder: 'Email',
+    wrapper: false, label: false %>
+  <%= f.input :password,
+    input_html: { class: 'form-control' },
+    placeholder: 'Password',
+    wrapper: false, label: false %>
+  <%= f.input :password_confirmation,
+    input_html: { class: 'form-control last' },
+    placeholder: 'Password Confirmation',
+    wrapper: false, label: false %>
+
+  <%= f.button :button, 'Sign up', class: 'btn btn-lg btn-primary btn-block' %>
+  <div class='links'>
+    <%= render 'devise/shared/links' %>
+  </div>
+<% end %>

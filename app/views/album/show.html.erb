@@ -1,0 +1,43 @@
+<%= link_to 'Edit profile', edit_user_registration_path, class: 'btn btn-info' %>
+<p id='notice'><%= notice %></p>
+
+<div class='user-avatar'>
+  <% if @user.avatar? %>
+    <%= cl_image_tag(@user.avatar.path, { size: '250x250', crop: :thumb, gravity: :face  }) %>
+  <% else %>
+    <img src='http://placehold.it/250x250'>
+  <% end %>
+</div>
+<div class='user-info'>
+  <h2><%= @user.name %></h2>
+  <h3><%= @user.email %></h3>
+</div>
+<div class='user-photos'>
+  <h3>(<%= @user.photos.count %>/10) photos</h3>
+  <button class='btn btn-primary btn-lg' data-toggle='modal' data-target='#add-photos-modal'>Add/Update Photos</button>
+  <ul class='user-photos-list'>
+    <% @user.photos.each do |photo| %>
+      <li class='user-photo-item'>
+        <%= cl_image_tag(photo.path, { height: 125, width: 125, crop: :fit }) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+<div class='modal fade' id='add-photos-modal' tabindex='-1' role='dialog' aria-hidden='true'>
+  <div class='modal-dialog'>
+    <div class='modal-content'>
+      <div class='modal-body'>
+        <%= simple_form_for @user do |f| %>
+          <%= f.attachinary_file_field :photos %>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+        <%= f.submit %>
+        <%  end %>
+      </div>
+    </div>
+  </div>
+</div>
+
