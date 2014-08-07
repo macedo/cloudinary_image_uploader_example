@@ -18,7 +18,9 @@
   <ul class='user-photos-list'>
     <% @user.photos.each do |photo| %>
       <li class='user-photo-item'>
-        <%= cl_image_tag(photo.path, { height: 125, width: 125, crop: :fit }) %>
+        <%= link_to albums_photo_path(photo) do %>
+          <%= cl_image_tag(photo.path, { height: 125, width: 125, crop: :fit }) %>
+        <% end %>
       </li>
     <% end %>
   </ul>

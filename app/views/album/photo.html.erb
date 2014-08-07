@@ -1,0 +1,11 @@
+<ul class='photo-list'>
+  <li class='photo-item'><%= cl_image_tag(@photo.path, width: 160, height: 160)%></li>
+  <li class='photo-item'><%= cl_image_tag(@photo.path, width: 160, height: 160, crop: :fit)%></li>
+  <li class='photo-item'><%= cl_image_tag(@photo.path, width: 160, height: 160, crop: :thumb,
+                                                       gravity: :face)%></li>
+  <li class='photo-item'><%= cl_image_tag(@photo.path, width: 160, height: 160, crop: :thumb,
+                                                       gravity: :faces)%></li>
+  <li class='photo-item'><%= cl_image_tag(@photo.path, width: 160, height: 160, crop: :fill)%></li>
+  <li class='photo-item'><%= cl_image_tag(@photo.path, width: 160, height: 160, crop: :fill,
+                                                       gravity: :face, radius: :max  )%></li>
+</ul>
